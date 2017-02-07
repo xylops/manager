@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk'
 import reducers from './reducers';
-import LoginForm from './component/LoginForm'
+import Router from './Router'
 
 var App = React.createClass({
     componentWillMount:function(){
@@ -25,7 +25,7 @@ var App = React.createClass({
                 {},
                 applyMiddleware(ReduxThunk))}
             >
-                <LoginForm/>
+                <Router />
             </Provider>
         )
     }

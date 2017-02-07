@@ -15,9 +15,10 @@ const style = {
 
 var CardSection = React.createClass({
     render:function(){
+        console.log(this.props.style)
         var {album} = this.props;
         return (
-            <View style={style.containerStyle}>
+            <View style={[style.containerStyle, this.props.style]}>
                 {this.props.children}
             </View>
         )
